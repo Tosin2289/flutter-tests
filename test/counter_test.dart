@@ -10,14 +10,14 @@ void main() {
 //Testing
   group('Counter Class -', () {
     test(
-      "given counter class when it is instantiatedd then value of count should be zero ",
+      "given counter class when it is instantiatedd then value of count should be 0 ",
       () {
         final val = counter.count;
         expect(val, 0);
       },
     );
     test(
-        "given counter class when it is incremented then the value of the count should be one",
+        "given counter class when it is incremented then the value of the count should be 1",
         () {
       ///Arrange
 
@@ -34,6 +34,13 @@ void main() {
       counter.decrementCounter();
       final val = counter.count;
       expect(val, -1);
+    });
+    test(
+        "Given counter clqass when it is reset then the value of the count should be 0",
+        () {
+      counter.reset();
+      final val = counter.count;
+      expect(val, 0);
     });
   });
 }
