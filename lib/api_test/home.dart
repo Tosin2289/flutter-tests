@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ftests/api_test/user_model.dart';
 import 'package:ftests/api_test/user_repository.dart';
+import 'package:http/http.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,7 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Future<User> getUsers = UserRepository().getUser();
+  Future<User> getUsers = UserRepository(Client()).getUser();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
