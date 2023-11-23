@@ -1,33 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:ftests/api_test/home.dart';
 import 'package:ftests/counter_app/home_page.dart';
 import 'package:ftests/models/favourite.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'screens/favorites.dart';
-import 'screens/home.dart';
 
 void main() {
   runApp(const TestingApp());
 }
 
-final _router = GoRouter(
-  routes: [
-    GoRoute(
-      path: HomePage.routeName,
-      builder: (context, state) {
-        return const HomePage();
-      },
-      routes: [
-        GoRoute(
-          path: FavoritesPage.routeName,
-          builder: (context, state) {
-            return const FavoritesPage();
-          },
-        ),
-      ],
-    ),
-  ],
-);
+// final _router = GoRouter(
+//   routes: [
+//     GoRoute(
+//       path: HomePage.routeName,
+//       builder: (context, state) {
+//         return const HomePage();
+//       },
+//       routes: [
+//         GoRoute(
+//           path: FavoritesPage.routeName,
+//           builder: (context, state) {
+//             return const FavoritesPage();
+//           },
+//         ),
+//       ],
+//     ),
+//   ],
+// );
 
 class TestingApp extends StatelessWidget {
   const TestingApp({super.key});
@@ -36,7 +36,7 @@ class TestingApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<Favorites>(
         create: (context) => Favorites(),
-        child: const MaterialApp(home: MyHomePage()));
+        child: const MaterialApp(home: HomePage()));
   }
 }
 // MaterialApp.router(
