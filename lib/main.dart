@@ -8,6 +8,7 @@ import 'package:ftests/widget_test/api_test/user_repository.dart';
 import 'package:ftests/widget_test/counter_app/counter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
+import 'integration_tests/login/login_page.dart';
 import 'screens/favorites.dart';
 import 'widget_test/animation/animation_screen.dart';
 
@@ -41,7 +42,7 @@ class TestingApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<Favorites>(
         create: (context) => Favorites(),
-        child: const MaterialApp(home: AbimationScreen()));
+        child: const MaterialApp(home: LoginScreen()));
   }
 }
 // MaterialApp.router(
