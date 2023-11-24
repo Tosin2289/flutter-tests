@@ -9,6 +9,7 @@ import 'package:ftests/widget_test/counter_app/counter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'screens/favorites.dart';
+import 'widget_test/animation/animation_screen.dart';
 
 void main() {
   runApp(const TestingApp());
@@ -40,8 +41,7 @@ class TestingApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<Favorites>(
         create: (context) => Favorites(),
-        child: MaterialApp(
-            home: HomeScreen(futureUsers: UserRepositorys().fetchUsers())));
+        child: const MaterialApp(home: AbimationScreen()));
   }
 }
 // MaterialApp.router(
