@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ftests/api_test/home.dart';
-import 'package:ftests/counter_app/home_page.dart';
+import 'package:ftests/unit_test/counter_app/api_test/home.dart';
+import 'package:ftests/unit_test/counter_app/home_page.dart';
 import 'package:ftests/models/favourite.dart';
+import 'package:ftests/widget_test/counter_app/counter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'screens/favorites.dart';
@@ -36,7 +37,7 @@ class TestingApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<Favorites>(
         create: (context) => Favorites(),
-        child: const MaterialApp(home: HomePage()));
+        child: const MaterialApp(home: CounterHomePage()));
   }
 }
 // MaterialApp.router(

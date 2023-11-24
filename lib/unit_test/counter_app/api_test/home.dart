@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ftests/api_test/user_model.dart';
-import 'package:ftests/api_test/user_repository.dart';
+import 'package:ftests/unit_test/counter_app/api_test/user_model.dart';
+import 'package:ftests/unit_test/counter_app/api_test/user_repository.dart';
 import 'package:http/http.dart';
 
 class HomePage extends StatefulWidget {

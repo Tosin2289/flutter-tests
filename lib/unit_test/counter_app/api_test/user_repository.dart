@@ -1,4 +1,4 @@
-import 'package:ftests/api_test/user_model.dart';
+import 'package:ftests/unit_test/counter_app/api_test/user_model.dart';
 import 'package:http/http.dart' as http;
 
 class UserRepository {
